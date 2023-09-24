@@ -35,8 +35,10 @@ app.post('/launch', async (req, res) => {
         const preferredExecutables =['C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
                                          'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'];
         let browser;
+        console.log('inside2');
          for (const executablePath of preferredExecutables) {
             try {
+                console.log('inside2');
               browser = await puppeteer.launch({
                 executablePath, headless: false, defaultViewport: false               
               });
