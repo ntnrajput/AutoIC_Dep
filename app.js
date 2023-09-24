@@ -22,7 +22,7 @@ app.post('/launch', async (req, res) => {
     try {
         
         const browser = await puppeteer.launch({
-            headless: true,
+            headless: false,
             defaultViewport: false,
             // executablePath: [
             //   'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
