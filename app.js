@@ -28,11 +28,13 @@ app.post('/launch', async (req, res) => {
         //     executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' ,
         //     args: ['--no-sandbox', '--disable-setuid-sandbox']
         // });
-        const browser = await puppeteer.launch({
-            headless: false,
-            defaultViewport: false,
+        
+        const browserWSEndpoint = process.env.BROWSER_WS_ENDPOINT; // Use an environment variable to pass the WebSocket endpoint
+
+        const browser = await puppeteer.connect({
+            browserWSEndpoint,
         });
-       
+        
         
         console.log('insidetry');
         const page = await browser.newPage();
