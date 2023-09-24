@@ -24,7 +24,9 @@ app.post('/launch', async (req, res) => {
         const browser = await puppeteer.launch({
             headless: true,
             defaultViewport: false,
-            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
+            executablePath: ['C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
+                            'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'],
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
         console.log('insidetry');
         const page = await browser.newPage();
