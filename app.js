@@ -22,37 +22,13 @@ app.post('/launch', async (req, res) => {
     try {
         console.log('inside')
         
-        // const browser = await puppeteer.launch({
-        //     headless: false,
-        //     defaultViewport: false,
-        //     executablePath: [
-        //       'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-        //       'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-        //       'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'
-        //     ],   
-        //     args: ['--no-sandbox', '--disable-setuid-sandbox']
-        // });
-        const preferredExecutables =['C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-                                         'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'];
-        let browser;
-        console.log('inside2');
-         for (const executablePath of preferredExecutables) {
-            try {
-                console.log('inside2');
-              browser = await puppeteer.launch({
-                executablePath, headless: false, defaultViewport: false               
-              });
-              break; // If successful, exit the loop
-            } catch (error) {
-              console.error(`Failed to launch using ${executablePath}: ${error.message}`);
-            }
-          }
-        
-          if (!browser) {
-            console.error('Unable to launch the browser.');
-            return;
-          }
-            
+        const browser = await puppeteer.launch({
+            headless: false,
+            defaultViewport: false,
+            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' ,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+       
         
         console.log('insidetry');
         const page = await browser.newPage();
