@@ -25,7 +25,8 @@ app.post('/launch', async (req, res) => {
             headless: true,
             defaultViewport: false,
             executablePath: ['C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',
-                            'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'],
+                            'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                            'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'],
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
         console.log('insidetry');
