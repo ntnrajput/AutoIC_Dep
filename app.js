@@ -22,20 +22,20 @@ app.post('/launch', async (req, res) => {
     try {
         console.log('inside')
         
-        // const browser = await puppeteer.launch({
-        //     headless: false,
-        //     defaultViewport: false,
-        //     executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' ,
-        //     args: ['--no-sandbox', '--disable-setuid-sandbox']
-        // });
-        
-        const browserWSEndpoint = process.env.BROWSER_WS_ENDPOINT; // Use an environment variable to pass the WebSocket endpoint
-
-        const browser = await puppeteer.connect({
-            browserWSEndpoint,
-            headless:false,
+        const browser = await puppeteer.launch({
+            headless: false,
             defaultViewport: false,
+            executablePath: 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe' ,
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
+        
+        // const browserWSEndpoint = process.env.BROWSER_WS_ENDPOINT; // Use an environment variable to pass the WebSocket endpoint
+
+        // const browser = await puppeteer.connect({
+        //     browserWSEndpoint,
+        //     headless:false,
+        //     defaultViewport: false,
+        // });
         
         
         console.log('insidetry');
