@@ -20,7 +20,7 @@ app.post('/launch', async (req, res) => {
     console.log(req.body);
     
     try {
-
+        console.log('insidetry');
         const browser = await puppeteer.launch({
             headless: false,
             defaultViewport: false,
