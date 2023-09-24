@@ -24,6 +24,7 @@ app.post('/launch', async (req, res) => {
         const browser = await puppeteer.launch({
             headless: false,
             defaultViewport: false,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
         });
         console.log('insidetry');
         const page = await browser.newPage();
