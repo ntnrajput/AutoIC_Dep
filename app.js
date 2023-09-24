@@ -22,7 +22,7 @@ app.post('/launch', async (req, res) => {
     try {
         
         const browser = await puppeteer.launch({
-            headless: false,
+            headless: true,
             defaultViewport: false,
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
         });
