@@ -17,6 +17,7 @@ app.post('/launch', async (req, res) => {
         grade, Raillen, railclass, rake, PO_Qty,
         Rate, Consignee_Code, BPO_Code,
     } = req.body;
+    console.log(req.body);
     
     try {
 
