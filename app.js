@@ -15,7 +15,7 @@ app.post('/launch', async (req, res) => {
     const {
         CaseNumber, PODate, PONumber, calldate, section,
         grade, Raillen, railclass, rake, PO_Qty,
-        Rate, Consignee_Code, BPO_Code,
+        Rate, f_s, Consignee_Code, BPO_Code,
     } = req.body;
     console.log(req.body);
     
