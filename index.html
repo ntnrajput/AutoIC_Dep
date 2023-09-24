@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto IC Maker</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Make IC Automatically</h1>
+        <form id="launchForm" action="/launch" method="post">
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="CaseNumber">Case Number:</label>
+                    <input type="text" class="form-control" id="CaseNumber" name="CaseNumber" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="PODate">PO Date:</label>
+                    <input type="date" class="form-control" id="PODate" name="PODate" required>
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="PONumber">PO Number:</label>
+                    <input type="text" class="form-control" id="PONumber" name="PONumber" required>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="calldate">Call Date:</label>
+                    <input type="date" class="form-control" id="calldate" name="calldate" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="section">Rail Section:</label>
+                    <select class="form-control" id="section" name="section" required>
+                        <option value="60E1">60-E1</option>
+                        <option value="IRS52">R-52</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="grade">Rail Grade:</label>
+                    <select class="form-control" id="grade" name="grade" required>
+                        <option value="R260">R260</option>
+                        <option value="880">880</option>
+                        <option value="350HT">350HT</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Raillen">Length:</label>
+                    <select class="form-control" id="Raillen" name="Raillen" required>
+                        <option value="260m">260m</option>
+                        <option value="26m">26m</option>
+                        <option value="13m">13m</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="railclass">Class of Rail:</label> <!-- Fixed the label here -->
+                    <select class="form-control" id="railclass" name="railclass" required>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-3">
+                    <label for="rake">Rake Number:</label> <!-- Fixed the label here -->
+                    <input type="number" class="form-control" id="rake" name="rake">                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="PO_Qty">PO Quantity:</label> <!-- Fixed the label here -->
+                    <input type="number" class="form-control" id="PO_Qty" name="PO_Qty">                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Rate">Rate:</label> <!-- Fixed the label here -->
+                    <input type="number" class="form-control" id="Rate" name="Rate">                    
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="Rate">Final/Stage:</label> <!-- Fixed the label here -->
+                    <select class="form-control" id="f/s" name="railclass" required>
+                        <option value="f">Final</option>
+                        <option value="s">Stage</option>
+                    </select>                   
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Consignee_Code">Consignee Code:</label>
+                <input type="number" class="form-control" id="Consignee_Code" name="Consignee_Code" required>
+            </div>
+
+            <div class="form-group">
+                <label for="BPO_Code">Bill Paying Authority Code:</label>
+                <input type="number" class="form-control" id="BPO_Code" name="BPO_Code" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Make IC</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery scripts (optional, if needed) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+<!-- stage or final -->
+<!-- irfc funded -->
