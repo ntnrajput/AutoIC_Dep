@@ -33,6 +33,8 @@ app.post('/launch', async (req, res) => {
 
         const browser = await puppeteer.connect({
             browserWSEndpoint,
+            headless:false,
+            defaultViewport: false,
         });
         
         
