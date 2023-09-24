@@ -20,13 +20,14 @@ app.post('/launch', async (req, res) => {
     console.log(req.body);
     
     try {
-        console.log('insidetry');
+        
         const browser = await puppeteer.launch({
             headless: false,
             defaultViewport: false,
         });
+        console.log('insidetry');
         const page = await browser.newPage();
-        await page.goto(websiteURL);
+        await page.goto('https://www.ritesinsp.com/rbs/Login_Form.aspx');
         await page.waitForTimeout(1000);
 
         await page.type('#txtUname', 'CRTECH');
