@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/launch', async (req, res) => {
-    const websiteURL = 'https://www.ritesinsp.com/rbs/Login_Form.aspx'
+    const websiteURL = 'http://www.ritesinsp.com/rbs/Login_Form.aspx'
     const {
         CaseNumber, PODate, PONumber, calldate, section,
         grade, Raillen, railclass, rake, PO_Qty,
